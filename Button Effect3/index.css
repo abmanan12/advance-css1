@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    padding: 1.5rem 2rem;
+    font-size: 2rem;
+    color: white;
+    text-transform: uppercase;
+    background-color: #2874a6;
+    position: relative;
+    border: none;
+}
+
+button::before {
+    content: "Web Developer";
+    padding: 1.5rem 2rem;
+    font-size: 2rem;
+    color: white;
+    text-transform: uppercase;
+    background-color: #7a004b;
+    position: absolute;
+    border: none;
+    top: 0%;
+    left: 0%;
+    transform: rotateX(270deg);
+    transform-origin: top;
+    transition: all 0.5s;
+}
+
+button:hover::before{
+    transform: rotateX(0deg);
+}
+
+button::after {
+    content: "Web Developer";
+    padding: 1.5rem 2rem;
+    font-size: 2rem;
+    color: white;
+    text-transform: uppercase;
+    background-color: #026d40;
+    position: absolute;
+    border: none;
+    top: 0%;
+    left: 0%;
+    transform: rotateX(270deg);
+    transform-origin: bottom;
+    transition: all 0.5s;
+}
+
+button:hover::after{
+    transform: rotateX(0deg);
+    transition-delay: 0.2s;
+}
